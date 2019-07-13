@@ -40,14 +40,14 @@ const classifyController ={
     update: async function(req,res,next) {
         let name = req.body.name;
         let id = req.params.id;
-        
+        console.log(1213231313123123);
         if(!name){
           res.json({ code: 0, message: '缺少必要参数' });
           return
         }
     
         try{
-          const classify = await Classify.update( id ,{  name });
+          const classify = await Classify.updata( id ,{  name });
           res.json({ 
             code: 200, 
             data: classify
